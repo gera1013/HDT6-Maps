@@ -53,7 +53,7 @@ public class HojaDeTrabajo6
         mapitaDeck.put(3, "PIP");
         mapitaDeck.put(4, "LOL");
         
-        set = mapitaDeck.keySet();
+        set = mapitaDeck.entrySet();
         iterator = set.iterator();
         while(iterator.hasNext()){
             System.out.println(iterator.next());

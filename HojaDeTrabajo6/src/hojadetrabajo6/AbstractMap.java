@@ -92,6 +92,13 @@ public abstract class AbstractMap<K,V> implements iMap<K,V>
      */
     @Override
     abstract public Set<K> keySet();
+    
+    /**
+     *
+     * @return
+     * @post returns a set of all keys and entries associated with this map
+     */
+    abstract public Set<Map.Entry<K,V>> entrySet();
 
     /**
      * @param other

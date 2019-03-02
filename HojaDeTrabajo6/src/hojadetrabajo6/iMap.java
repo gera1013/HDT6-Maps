@@ -1,6 +1,7 @@
 package hojadetrabajo6;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 /**
@@ -83,6 +84,13 @@ public interface iMap<K,V>
      * @post returns a set of all keys associated with this map
      */
     public Set<K> keySet();
+    
+    /**
+     *
+     * @return
+     * @post returns a set of all keys and entries associated with this map
+     */
+    public Set<Entry<K,V>> entrySet();
 
     /**
      * @param other
@@ -90,11 +98,13 @@ public interface iMap<K,V>
      * @pre other is non-null
      * @post returns true iff maps this and other are entry-wise equal
      */
+    @Override
     public boolean equals(Object other);
     
     /**
      * @return 
      * @post returns a hash code associated with this structure
      */
+    @Override
     public int hashCode();
 }

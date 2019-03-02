@@ -1,6 +1,7 @@
 package hojadetrabajo6;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -131,6 +132,17 @@ public class Tree<K,V> extends AbstractMap<K,V>
     public Set<K> keySet()
     {
         return datos.keySet();
+    }
+    
+    /**
+     *
+     * @return
+     * @post returns a set of all keys and entries associated with this map
+     */
+    @Override
+    public Set<Entry<K,V>> entrySet()
+    {
+        return datos.entrySet();
     }
 
     /**

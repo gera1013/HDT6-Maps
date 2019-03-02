@@ -7,6 +7,7 @@ package hojadetrabajo6;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 /**
@@ -136,6 +137,17 @@ public class LinkedHash<K,V> extends AbstractMap<K,V>
     public Set<K> keySet()
     {
         return datos.keySet();
+    }
+    
+    /**
+     *
+     * @return
+     * @post returns a set of all keys and entries associated with this map
+     */
+    @Override
+    public Set<Entry<K,V>> entrySet()
+    {
+        return datos.entrySet();
     }
 
     /**

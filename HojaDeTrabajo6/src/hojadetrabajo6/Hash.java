@@ -1,6 +1,7 @@
 package hojadetrabajo6;
 
 import java.util.*;
+import java.util.Map.Entry;
 
 /**
  *
@@ -127,6 +128,17 @@ public class Hash<K,V> extends AbstractMap<K,V>
     public Set<K> keySet()
     {
         return datos.keySet();
+    }
+    
+    /**
+     *
+     * @return
+     * @post returns a set of all keys and entries associated with this map
+     */
+    @Override
+    public Set<Entry<K,V>> entrySet()
+    {
+        return datos.entrySet();
     }
 
     /**

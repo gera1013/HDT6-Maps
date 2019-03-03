@@ -72,9 +72,9 @@ public class HojaDeTrabajo6
         
         int y = 0;
         
-        try
+        while(y != 7)
         {
-            while(y >= 8 || y <= 0)
+            try
             {
                 System.out.println("");
                 System.out.println("PRESIONA 1 para AGREGAR UNA CARTA A TU COLECCION");
@@ -87,66 +87,83 @@ public class HojaDeTrabajo6
                 System.out.println("");
                 y = scan.nextInt();
                 salto = scan.nextLine();
+                    
+                while(y >= 8 || y <= 0)
+                {
+                    System.out.println("");
+                    System.out.println("PRESIONA 1 para AGREGAR UNA CARTA A TU COLECCION");
+                    System.out.println("PRESIONA 2 para MOSTRAR EL TIPO DE UNA CARTA");
+                    System.out.println("PRESIONA 3 para MOSTRAR NOMBRE, TIPO Y CANTIDAD");
+                    System.out.println("PRESIONA 4 para MOSTRAR NOMBRE, TIPO Y CANTIDAD (ORDENADO)");
+                    System.out.println("PRESIONA 5 para NOMBRE Y TIPO ");
+                    System.out.println("PRESIONA 6 para NOMBRE Y TIPO (ORDENADO)");
+                    System.out.println("PRESIONA 7 para SALIR");
+                    System.out.println("");
+                    y = scan.nextInt();
+                    salto = scan.nextLine();
+                }
+            } catch(InputMismatchException e)
+            {
+                System.out.println("Ingrese solamente numeros por favor");
+                System.exit(0);
             }
-        } catch(InputMismatchException e)
-        {
-            System.out.println("Ingrese solamente numeros por favor");
-            System.exit(0);
-        }
-        
-        switch(y)
-        {
-            case 1:
-                System.out.println("Ingrese el nombre de la carta que desea agregar ");
-                String carta = scan.nextLine();
-                if(mapitaBaraja.containsKey(carta))
-                {
-                    mapita.put(carta, mapitaBaraja.get(carta));
-                    System.out.println("La carta " + carta + " se ha agregado con exito ");
-                }
-                else
-                {
-                    System.out.println("La carta " + carta + " no se encuentra en la coleccion");
-                }
-            break;
             
-            case 2:
-                System.out.println("Ingrese el nombre de la carta ");
-                carta = scan.nextLine();
-                if(mapitaBaraja.containsKey(carta))
-                    System.out.println("La carta " + carta + " es de tipo " + mapitaBaraja.get(carta));
-                else
-                {
-                    System.out.println("La carta " + carta + " no se encuentra en la coleccion");
-                }
-            break;
-            
-            case 3:
-                //
-            break;
-            
-            case 4:
-                //
-            break;
-            
-            case 5:
-                System.out.println("Estas son las cartas que se encuentran almacenadas en la coleccion: ");
-                System.out.println("");
-                mapitaBaraja.display();
-            break;
-            
-            case 6:
-                //
-            break;
-            
-            case 7:
-                System.out.println("Cerrando sistema...");
-                System.out.close();
-            break;
-            
-            default:
-                System.out.println("");
-            break;
+            switch(y)
+            {
+                case 1:
+                    System.out.println("Ingrese el nombre de la carta que desea agregar ");
+                    String carta = scan.nextLine();
+                    if(mapitaBaraja.containsKey(carta))
+                    {
+                        mapita.put(carta, mapitaBaraja.get(carta));
+                        System.out.println("La carta " + carta + " se ha agregado con exito ");
+                    }
+                    else
+                    {
+                        System.out.println("La carta " + carta + " no se encuentra en la coleccion");
+                    }
+                break;
+                
+                case 2:
+                    System.out.println("Ingrese el nombre de la carta ");
+                    carta = scan.nextLine();
+                    if(mapitaBaraja.containsKey(carta))
+                        System.out.println("La carta " + carta + " es de tipo " + mapitaBaraja.get(carta));
+                    else
+                    {
+                        System.out.println("La carta " + carta + " no se encuentra en la coleccion");
+                    }
+                break;
+                
+                case 3:
+                    //
+                break;
+                
+                case 4:
+                    //
+                break;
+                
+                case 5:
+                    System.out.println("Estas son las cartas que se encuentran almacenadas en la coleccion: ");
+                    System.out.println("");
+                    mapitaBaraja.display();
+                break;
+                
+                case 6:
+                    System.out.println("Estas son las cartas que se encuentran almacenadas en la coleccion: ");
+                    System.out.println("");
+                    mapitaBaraja.displayOrdenado();
+                break;
+                
+                case 7:
+                    System.out.println("Cerrando sistema...");
+                    System.out.close();
+                break;
+                
+                default:
+                    System.out.println("");
+                break;
+            }  
         }
     }
 }

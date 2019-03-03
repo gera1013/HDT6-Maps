@@ -117,11 +117,14 @@ public abstract class AbstractMap<K,V> implements iMap<K,V>
     abstract public int hashCode();
     
     /**
-     *
+     * Muestra los elementos que existen dentro del map
      */
     @Override
     abstract public void display();
     
+    /**
+     * Muestra los elementos que existen dentro del map de manera ordenada
+     */
     @Override
     abstract public void displayOrdenado();
 }

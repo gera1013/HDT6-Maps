@@ -167,6 +167,9 @@ public class Tree<K,V> extends AbstractMap<K,V>
         return datos.hashCode();
     }
     
+    /**
+     * Muestra los elementos que existen dentro del map
+     */
     @Override
     public void display()
     {
@@ -178,6 +181,9 @@ public class Tree<K,V> extends AbstractMap<K,V>
         });
     }
     
+    /**
+     * Muestra los elementos que existen dentro del map de manera ordenada
+     */
     @Override
     public void displayOrdenado() 
     {

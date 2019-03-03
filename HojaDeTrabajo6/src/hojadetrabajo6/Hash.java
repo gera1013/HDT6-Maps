@@ -165,6 +165,9 @@ public class Hash<K,V> extends AbstractMap<K,V>
         return datos.hashCode();
     }
     
+    /**
+     * Muestra los elementos que existen dentro del map
+     */
     @Override
     public void display()
     {
@@ -175,7 +178,10 @@ public class Hash<K,V> extends AbstractMap<K,V>
             System.out.println("Carta: " + key + " / Tipo: " + value);
         });
     }
-
+    
+    /**
+     * Muestra los elementos que existen dentro del map de manera ordenada
+     */
     @Override
     public void displayOrdenado() 
     {

@@ -122,5 +122,6 @@ public abstract class AbstractMap<K,V> implements iMap<K,V>
     @Override
     abstract public void display();
     
+    @Override
     abstract public void displayOrdenado();
 }

@@ -6,6 +6,8 @@ import java.util.Map.Entry;
 /**
  *
  * @author Gerardo
+ * @param <K>
+ * @param <V>
  */
 public class Hash<K,V> extends AbstractMap<K,V>
 {
@@ -171,6 +173,37 @@ public class Hash<K,V> extends AbstractMap<K,V>
             String key = name.toString();
             String value = datos.get(name).toString();
             System.out.println("Carta: " + key + " / Tipo: " + value);
+        });
+    }
+
+    @Override
+    public void displayOrdenado() 
+    {
+        Set<K> set = datos.keySet();
+        System.out.println("Las cartas tipo MONSTRUO son:");
+        set.forEach((name) -> {
+            String key = name.toString();
+            String value = datos.get(name).toString();
+            if(value.equals("Monstruo"))
+                System.out.println("- " + key);
+        });
+        System.out.println("");
+        System.out.println("");
+        System.out.println("Las cartas tipo HECHIZO son:");
+        set.forEach((name) -> {
+            String key = name.toString();
+            String value = datos.get(name).toString();
+            if(value.equals("Hechizo"))
+                System.out.println("- " + key);
+        });
+        System.out.println("");
+        System.out.println("");
+        System.out.println("Las cartas tipo TRAMPA son:");
+        set.forEach((name) -> {
+            String key = name.toString();
+            String value = datos.get(name).toString();
+            if(value.equals("Trampa"))
+                System.out.println("- " + key);
         });
     }
 }

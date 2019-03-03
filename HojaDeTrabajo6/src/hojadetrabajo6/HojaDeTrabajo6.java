@@ -67,9 +67,7 @@ public class HojaDeTrabajo6
         }
         
         reader.close();
-        
-        //mapitaBaraja.display();
-        
+                
         int y = 0;
         
         while(y != 7)

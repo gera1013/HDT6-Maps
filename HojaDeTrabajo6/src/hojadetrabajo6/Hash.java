@@ -166,12 +166,11 @@ public class Hash<K,V> extends AbstractMap<K,V>
     @Override
     public void display()
     {
-        Set set;
-        Iterator iterator;
-        set = datos.entrySet();
-        iterator = set.iterator();
-        while(iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
+        Set<K> set = datos.keySet();
+        set.forEach((name) -> {
+            String key = name.toString();
+            String value = datos.get(name).toString();
+            System.out.println("Carta: " + key + " / Tipo: " + value);
+        });
     }
 }

@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  *
@@ -20,6 +21,7 @@ public class HojaDeTrabajo6
      */
     public static void main(String[] args) throws FileNotFoundException, IOException 
     {
+        String salto;
         Scanner scan = new Scanner(System.in);
         
         int x = 0;
@@ -66,7 +68,7 @@ public class HojaDeTrabajo6
         
         reader.close();
         
-        mapitaBaraja.display();
+        //mapitaBaraja.display();
         
         int y = 0;
         
@@ -84,6 +86,7 @@ public class HojaDeTrabajo6
                 System.out.println("PRESIONA 7 para SALIR");
                 System.out.println("");
                 y = scan.nextInt();
+                salto = scan.nextLine();
             }
         } catch(InputMismatchException e)
         {
@@ -94,21 +97,56 @@ public class HojaDeTrabajo6
         switch(y)
         {
             case 1:
-                //
+                System.out.println("Ingrese el nombre de la carta que desea agregar ");
+                String carta = scan.nextLine();
+                if(mapitaBaraja.containsKey(carta))
+                {
+                    mapita.put(carta, mapitaBaraja.get(carta));
+                    System.out.println("La carta " + carta + " se ha agregado con exito ");
+                }
+                else
+                {
+                    System.out.println("La carta " + carta + " no se encuentra en la coleccion");
+                }
+            break;
+            
             case 2:
-                //
+                System.out.println("Ingrese el nombre de la carta ");
+                carta = scan.nextLine();
+                if(mapitaBaraja.containsKey(carta))
+                    System.out.println("La carta " + carta + " es de tipo " + mapitaBaraja.get(carta));
+                else
+                {
+                    System.out.println("La carta " + carta + " no se encuentra en la coleccion");
+                }
+            break;
+            
             case 3:
                 //
+            break;
+            
             case 4:
                 //
+            break;
+            
             case 5:
-                //
+                System.out.println("Estas son las cartas que se encuentran almacenadas en la coleccion: ");
+                System.out.println("");
+                mapitaBaraja.display();
+            break;
+            
             case 6:
                 //
+            break;
+            
             case 7:
-                //
+                System.out.println("Cerrando sistema...");
+                System.out.close();
+            break;
+            
             default:
-                break;
+                System.out.println("");
+            break;
         }
     }
 }

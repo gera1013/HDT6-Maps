@@ -109,4 +109,6 @@ public interface iMap<K,V>
     public int hashCode();
     
     public void display();
+    
+    public void displayOrdenado();
 }

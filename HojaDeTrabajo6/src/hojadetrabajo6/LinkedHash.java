@@ -5,7 +5,6 @@
  */
 package hojadetrabajo6;
 
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;

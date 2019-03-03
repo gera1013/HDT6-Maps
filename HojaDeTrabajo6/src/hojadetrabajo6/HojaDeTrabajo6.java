@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hojadetrabajo6;
 
 import java.util.InputMismatchException;
@@ -22,8 +17,6 @@ public class HojaDeTrabajo6
      */
     public static void main(String[] args) 
     {
-        Set set;
-        Iterator iterator;
         Scanner scan = new Scanner(System.in);
         
         int x = 0;
@@ -45,18 +38,9 @@ public class HojaDeTrabajo6
         }
         
         MapFactory factory = new MapFactory();
-        iMap mapitaDeck = factory.getMap(x);
+        iMap mapita = factory.getMap(x);
         iMap mapitaBaraja = factory.getMap(x);
         
-        mapitaDeck.put(1, "YOLO");
-        mapitaDeck.put(2, "NANU");
-        mapitaDeck.put(3, "PIP");
-        mapitaDeck.put(4, "LOL");
         
-        set = mapitaDeck.entrySet();
-        iterator = set.iterator();
-        while(iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
     }
 }

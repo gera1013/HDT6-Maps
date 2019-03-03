@@ -1,5 +1,6 @@
 package hojadetrabajo6;
 
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -165,5 +166,17 @@ public class Tree<K,V> extends AbstractMap<K,V>
     public int hashCode()
     {
         return datos.hashCode();
-    }   
+    }
+    
+    @Override
+    public void display()
+    {
+        Set set;
+        Iterator iterator;
+        set = datos.entrySet();
+        iterator = set.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+    }
 }

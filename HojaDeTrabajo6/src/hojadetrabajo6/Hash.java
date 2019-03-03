@@ -162,4 +162,16 @@ public class Hash<K,V> extends AbstractMap<K,V>
     {
         return datos.hashCode();
     }
+    
+    @Override
+    public void display()
+    {
+        Set set;
+        Iterator iterator;
+        set = datos.entrySet();
+        iterator = set.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+    }
 }

@@ -107,4 +107,6 @@ public interface iMap<K,V>
      */
     @Override
     public int hashCode();
+    
+    public void display();
 }

@@ -1,14 +1,11 @@
 package hojadetrabajo6;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.InputMismatchException;
-import java.util.Iterator;
 import java.util.Scanner;
-import java.util.Set;
 
 /**
  *
@@ -55,7 +52,7 @@ public class HojaDeTrabajo6
         
         while ((line = reader.readLine()) != null)
         {
-            String[] parts = line.split(":", 2);
+            String[] parts = line.split("[|]", 2);
             if (parts.length >= 2)
             {
                 String key = parts[0];
@@ -68,6 +65,8 @@ public class HojaDeTrabajo6
         }
         
         reader.close();
+        
+        mapitaBaraja.display();
         
         int y = 0;
         

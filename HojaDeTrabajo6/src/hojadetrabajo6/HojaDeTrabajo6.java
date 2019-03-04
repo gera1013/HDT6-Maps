@@ -109,7 +109,7 @@ public class HojaDeTrabajo6
             switch(y)
             {
                 case 1:
-                    System.out.println("Ingrese el nombre de la carta que desea agregar ");
+                    System.out.println("Ingresa el nombre de la carta que deseas agregar a tu coleccion");
                     String carta = scan.nextLine();
                     if(mapitaBaraja.containsKey(carta))
                     {
@@ -123,7 +123,7 @@ public class HojaDeTrabajo6
                 break;
                 
                 case 2:
-                    System.out.println("Ingrese el nombre de la carta ");
+                    System.out.println("Ingresa el nombre de la carta para mostrar la informacion");
                     carta = scan.nextLine();
                     if(mapitaBaraja.containsKey(carta))
                         System.out.println("La carta " + carta + " es de tipo " + mapitaBaraja.get(carta));
@@ -192,7 +192,7 @@ public class HojaDeTrabajo6
                 break;
                 
                 case 6:
-                    System.out.println("Estas son las cartas que se encuentran almacenadas en la coleccion: ");
+                    System.out.println("Estas son las cartas que se encuentran almacenadas en la coleccion (ordenadas): ");
                     System.out.println("");
                     mapitaBaraja.displayOrdenado();
                 break;

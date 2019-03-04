@@ -1,4 +1,4 @@
-package hojadetrabajo6;
+//package hojadetrabajo6;
 
 import java.util.*;
 

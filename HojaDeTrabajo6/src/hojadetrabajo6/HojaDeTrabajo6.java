@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  *
@@ -133,11 +134,55 @@ public class HojaDeTrabajo6
                 break;
                 
                 case 3:
-                    //
+                    int contMonstruo = 0;
+                    int contHechizo = 0;
+                    int contTrampa = 0;
+                    Set<String> set = mapita.keySet();
+                    System.out.println("Estas son las cartas que hay en tu coleccion: ");
+                    System.out.println("");
+                    for(String name : set){
+                        String value = mapita.get(name).toString();
+                        if(value.equals("Monstruo"))
+                            contMonstruo += 1;
+                        if(value.equals("Hechizo"))
+                            contHechizo += 1;
+                        if(value.equals("Trampa"))
+                            contTrampa += 1;
+                    }
+                    String cont1 = String.valueOf(contMonstruo);
+                    String cont2 = String.valueOf(contHechizo);
+                    String cont3 = String.valueOf(contTrampa);
+                    mapita.display();
+                    System.out.println("Hay un total de " + cont1 + " cartas de tipo Monstruo");
+                    System.out.println("Hay un total de " + cont2 + " cartas de tipo Hechizo");
+                    System.out.println("Hay un total de " + cont3 + " cartas de tipo Trampa");
+                    System.out.println("");
                 break;
                 
                 case 4:
-                    //
+                    contMonstruo = 0;
+                    contHechizo = 0;
+                    contTrampa = 0;
+                    set = mapita.keySet();
+                    System.out.println("Estas son las cartas que hay en tu coleccion: ");
+                    System.out.println("");
+                    for(String name : set){
+                        String value = mapita.get(name).toString();
+                        if(value.equals("Monstruo"))
+                            contMonstruo += 1;
+                        if(value.equals("Hechizo"))
+                            contHechizo += 1;
+                        if(value.equals("Trampa"))
+                            contTrampa += 1;
+                    }
+                    cont1 = String.valueOf(contMonstruo);
+                    cont2 = String.valueOf(contHechizo);
+                    cont3 = String.valueOf(contTrampa);
+                    mapita.display();
+                    System.out.println("Hay un total de " + cont1 + " cartas de tipo Monstruo");
+                    System.out.println("Hay un total de " + cont2 + " cartas de tipo Hechizo");
+                    System.out.println("Hay un total de " + cont3 + " cartas de tipo Trampa");
+                    System.out.println("");
                 break;
                 
                 case 5:
